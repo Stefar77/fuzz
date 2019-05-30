@@ -21,7 +21,7 @@ void    execute_code(unsigned char *p){
 void    fuzz(){
         unsigned char *code = mmap(NULL, lenbuf, PROT_EXEC | PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
 
-        for(int i=0; i<lenbuf; i++) code[i]=rand() % 255;
+        for(int i=0; i<lenbuf; i++) code[i]=rand();
 
         execute_code(code);
 }
