@@ -21,25 +21,9 @@ void    execute_code(unsigned char *p){
 void    fuzz(){
         unsigned char *code = mmap(NULL, lenbuf, PROT_EXEC | PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
 
-        while(1){
-                for(int i=0; i<lenbuf; i++) code[i]=rand() % 255;
+        for(int i=0; i<lenbuf; i++) code[i]=rand() % 255;
 
-                int pid = fork();
-                if(pid == -1) exit(0);
-
-                if(pid == 0) {
-                        execute_code(code);
-                }else{
-                        int     status;
-                        pid_t   r;
-                        r=waitpid(pid, &status, 0);
-                        if(r == -1) {
-                                        kill(pid, 9);
-                                        sleep(1);
-                                        waitpid(pid, &status, WNOHANG);
-                        }
-                }
-        }
+        execute_code(code);
 }
 
 int     main(int argc, char *argv[]) {
