@@ -17,4 +17,4 @@ fizz2.sh runs fuzz2 with different seeds and displays the seed until it crashes 
 Also did this only with a couple if pushes and then an int 0x80 call but that makes one big mess in your filesystem.
 
 
-If you try fuzz2 on FreeBSD 12-P4 start somewhere high like 1000000, I'm still testing and just restarted after some changes in the code.
+If you try fuzz2 on FreeBSD 12-P4 (1 core, 8GB RAM) start somewhere high like 1000000, I'm still testing and just restarted after some changes in the code.
