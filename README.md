@@ -19,5 +19,6 @@ Also did this only with a couple if pushes and then an int 0x80 call but that ma
 
 If you try fuzz2 on FreeBSD 12-P4 (1 or 2 cores, 8GB RAM) start somewhere high like 1000000, I'm still testing and just restarted after some changes in the code and vm
 
-FreeBSD 12-R4 - 2 cores (fuzz2)
+FreeBSD 12-R4 AND FreeBSD 13/HEAD - 2 cores (fuzz2)
+
 265542, 355881
