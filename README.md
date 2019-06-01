@@ -22,4 +22,5 @@ If you try fuzz2 on FreeBSD 12-P4 (1 or 2 cores, 8GB RAM) start somewhere high l
 interesting seeds for fuzz2
 
 265542 (FBSD12/P4, FBSD13/HEAD)
+
 355881 (FBSD12/P4)
