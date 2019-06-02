@@ -24,3 +24,5 @@ interesting seeds for fuzz2
 265542 (FBSD12/P4, FBSD13/HEAD) Bhyve: YES -- Native: No!
 
 355881 (FBSD12/P4) Bhyve: YES -- Native: No!
+
+1029329 (FBSD12/P4) Bhyve: YES
